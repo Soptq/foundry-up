@@ -11,3 +11,5 @@ bin/chisel
 foundry_nightly_*
 
 package-lock.json
+
+node_modules/

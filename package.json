@@ -1,14 +1,17 @@
 {
   "name": "foundry-up",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "The NPM package that simply loads Foundry executable.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "node ./index.js"
   },
-  "directories": {
-    "bin": "./bin"
+  "bin": {
+    "forge": "bin/forge-delegate.sh",
+    "cast": "bin/cast-delegate.sh",
+    "anvil": "bin/anvil-delegate.sh",
+    "chisel": "bin/chisel-delegate.sh"
   },
   "author": "Soptq",
   "license": "MIT",
