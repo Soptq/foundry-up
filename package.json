@@ -1,0 +1,20 @@
+{
+  "name": "foundry-up",
+  "version": "1.0.0",
+  "description": "The NPM package that simply loads Foundry executable.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./index.js"
+  },
+  "directories": {
+    "bin": "./bin"
+  },
+  "author": "Soptq",
+  "license": "MIT",
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "node-fetch": "^2.7.0",
+    "tar": "^6.2.0"
+  }
+}
