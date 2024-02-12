@@ -10,6 +10,8 @@ When installing, this package will install the latest nightly version of Foundry
 
 ```bash
 npm install -g foundry-up
+# or specify a release tag (version)
+# npm install -g foundry-up --foundry_version=nightly-2cf84d9f3ba7b6f4a9296299e7036ecc24cfa1da
 ```
 
 > Note that you can install this package locally, but in this case you won't be able to execute the commands globally. See below for more details.

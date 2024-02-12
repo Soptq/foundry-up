@@ -8,7 +8,15 @@ const { getDownloadObject } = require("./src/utils");
 
 async function main() {
     try {
-        const version = "nightly";
+        let version;
+        if (process.argv.length === 2) {
+            version = "nightly";
+        } else if (process.argv.length === 3) {
+            version = process.argv[2];
+        } else {
+            throw new Error("Invalid number of arguments, expects 0 or 1 argument (foundry version).");
+        }
+
         const download = getDownloadObject(version);
         console.info(`Downloading Foundry '${version}' from: ${download.url}`);
         const response = await fetch(download.url);
@@ -31,13 +39,8 @@ async function main() {
         await unlink(download.filename);
     } catch (err) {
         console.error(err);
+        process.exit(1);
     }
 }
 
-main()
-
-// module.exports = main;
-//
-// if (require.main === module) {
-//     main();
-// }
+main();
